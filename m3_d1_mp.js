@@ -246,29 +246,38 @@ console.log(calculateSumOfIntegersInRange(73, 2))
     âš ï¸ The factor is an integer which evenly divides a number without leaving a remainder. One number can have more than one factor, in that case you should return both names.
 Ex. 15 has both 3 and 5 has factors: the function will return `DiegoRiccardo` */
 
-const numberToString = function (num) {
+// const numberToString = function (num) {
+//     let newStr = ''
+//     if ((num % 3) === 0 && (num % 5) === 0 && (num % 7) === 0) {
+//         newStr = 'DiegoRiccardoStefano'
+//     } else if ((num % 3) === 0 && (num % 5) === 0) {
+//         newStr = 'DiegoRiccardo'
+//     } else if ((num % 3) === 0 && (num % 7) === 0) {
+//         newStr = 'DiegoStefano'
+//     } else if ((num % 5) === 0 && (num % 7) === 0) {
+//         newStr = 'RiccardoStefano'
+//     } else if ((num % 3) === 0) {
+//         newStr = 'Diego'
+//     } else if ((num % 5) === 0) {
+//         newStr = 'Riccardo'
+//     } else if ((num % 7) === 0) {
+//         newStr = 'Stefano'
+//     } else {
+//         newStr = num
+//     }
+//     return newStr
+// }
+
+const numberToStringByFactor = function (num) {
     let newStr = ''
-    if ((num % 3) === 0 && (num % 5) === 0 && (num % 7) === 0) {
-        newStr = 'DiegoRiccardoStefano'
-    } else if ((num % 3) === 0 && (num % 5) === 0) {
-        newStr = 'DiegoRiccardo'
-    } else if ((num % 3) === 0 && (num % 7) === 0) {
-        newStr = 'DiegoStefano'
-    } else if ((num % 5) === 0 && (num % 7) === 0) {
-        newStr = 'RiccardoStefano'
-    } else if ((num % 3) === 0) {
-        newStr = 'Diego'
-    } else if ((num % 5) === 0) {
-        newStr = 'Riccardo'
-    } else if ((num % 7) === 0) {
-        newStr = 'Stefano'
-    } else {
-        newStr = num
-    }
+    if ((num % 3 !== 0) && (num % 7 !== 0) && (num % 7 !== 0)) return num
+    if (num % 3 === 0) newStr += 'Diego'
+    if (num % 5 === 0) newStr += 'Riccardo'
+    if (num % 7 === 0) newStr += 'Stefano'
     return newStr
 }
 
-console.log(numberToString(35))
+console.log(numberToStringByFactor(35))
 
 /* 19. Create a function that that takes a phrase as a parameter and returns its acronym.
 Ex. British Broadcasting Corporation returns `BBC` */
