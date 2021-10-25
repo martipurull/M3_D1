@@ -35,7 +35,7 @@ const removeOneCharacter = function (str, charNum) {
     return str.replace(charToRemove, '')
 }
 
-console.log(removeOneCharacter('I love you', 5))
+console.log(removeOneCharacter('Can you believe it?', 5))
 
 /* 4. Create a function to find and return the largest of three given integers. */
 
@@ -153,19 +153,19 @@ console.log(returnLongestString(['I love you', 'I hate you', 'I feel rather indi
 
 const findAngleType = function (ang) {
     if (ang > 0 && ang < 90) {
-        console.log(`${ ang } degrees makes for an acute angle.`)
+        return `${ ang } degrees makes for an acute angle.`
     } else if (ang === 90) {
-        console.log(`${ ang } degrees gives you a right angle.`)
+        return `${ ang } degrees gives you a right angle.`
     } else if (ang > 90 && ang < 180) {
-        console.log(`${ ang } degrees makes for an obtuse angle.`)
+        `${ ang } degrees makes for an obtuse angle.`
     } else if (ang === 180) {
-        console.log(`${ ang } degrees gives you a straight angle.`)
+        `${ ang } degrees gives you a straight angle.`
     } else {
-        console.log(`${ ang } degrees isn't a valid parametre.`)
+        return `${ ang } degrees isn't a valid parametre.`
     }
 }
 
-findAngleType(50)
+console.log(findAngleType(50))
 
 /* 13. Create a function to find and return the index of the greatest element of a given array of integers that you passed as a parameter. */
 
