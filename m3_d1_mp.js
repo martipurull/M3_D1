@@ -198,3 +198,84 @@ console.log(findLargestEvenNum([1, 87, 230, 45, 3, 78, 9987, 34, 908, 78]))
 /* 15. Create a function to check from two given integers (passed as parameters) if one is positive and the other is negative.
     Return `true` if that's the case, return `false` if it's not. */
 
+const checkIfPositiveAndNegative = function (int1, int2) {
+    if (int1 > 0 && int2 < 0) {
+        return true
+    } else if (int1 < 0 && int2 > 0) {
+        return true
+    } else {
+        return `Both numbers are either positive or negative. More diversity is needed.`
+    }
+}
+
+console.log(checkIfPositiveAndNegative(-1, -1))
+
+/* 16. Create a function to create and return a new string where the first 3 characters and in lower case and the others are in upper case.
+    If the string's length is less than 3, convert the whole string into uppercase. Pass the original string as a parameter. */
+
+const createNewUppercaseString = function (str) {
+    if (str.length <= 3) {
+        return str.toUpperCase()
+    } else {
+        let newStr = str.slice(0, 3).toLowerCase() + str.slice(3).toUpperCase()
+        return newStr
+    }
+}
+
+console.log(createNewUppercaseString('Can you hear me?!'))
+
+/* 17. Create a function to calculate the sum of two integers (passed as parameters).
+    If the sum is in the 50-80 range, return `65`, otherwise, return `80`. */
+
+const calculateSumOfIntegersInRange = function (int1, int2) {
+    let sumOfInts = int1 + int2
+    if (sumOfInts >= 50 && sumOfInts < 80) {
+        return '65'
+    } else {
+        return '80'
+    }
+}
+
+console.log(calculateSumOfIntegersInRange(73, 2))
+
+/* 18. Create a function to convert a number (passed as a parameter) into a string, basing yourself on this example:
+    The number has 3 as a factor â‡’ return `Diego`
+    The number has 5 as a factor â‡’ return `Riccardo`
+    The number has 7 as a factor â‡’ return `Stefano`
+    If the number does not have 3,5, or 7, return the original number.
+    âš ï¸ The factor is an integer which evenly divides a number without leaving a remainder. One number can have more than one factor, in that case you should return both names.
+Ex. 15 has both 3 and 5 has factors: the function will return `DiegoRiccardo` */
+
+const numberToString = function (num) {
+    let newStr = ''
+    if ((num % 3) === 0 && (num % 5) === 0) {
+        newStr = 'DiegoRiccardo'
+    } else if ((num % 3) === 0 && (num % 7) === 0) {
+        newStr = 'DiegoStefano'
+    } else if ((num % 3) === 0) {
+        newStr = 'Diego'
+    } else if ((num % 5) === 0) {
+        newStr = 'Riccardo'
+    } else if ((num % 7) === 0) {
+        newStr = 'Stefano'
+    } else {
+        newStr = num
+    }
+    return newStr
+}
+
+console.log(numberToString(15))
+
+/* 19. Create a function that that takes a phrase as a parameter and returns its acronym.
+Ex. British Broadcasting Corporation returns `BBC` */
+
+const createAcronym = function (str) {
+    let splitStr = str.split(' ')
+    let acronym = ''
+    for (word of splitStr) {
+        acronym += word.slice(0, 1)
+    }
+    return acronym.toUpperCase()
+}
+
+console.log(createAcronym('british broadcasting corporation'))
