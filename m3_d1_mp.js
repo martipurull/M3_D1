@@ -252,6 +252,8 @@ const numberToString = function (num) {
         newStr = 'DiegoRiccardo'
     } else if ((num % 3) === 0 && (num % 7) === 0) {
         newStr = 'DiegoStefano'
+    } else if ((num % 5) === 0 && (num % 7) === 0) {
+        newStr = 'RiccardoStefano'
     } else if ((num % 3) === 0) {
         newStr = 'Diego'
     } else if ((num % 5) === 0) {
