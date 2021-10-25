@@ -248,7 +248,9 @@ Ex. 15 has both 3 and 5 has factors: the function will return `DiegoRiccardo` */
 
 const numberToString = function (num) {
     let newStr = ''
-    if ((num % 3) === 0 && (num % 5) === 0) {
+    if ((num % 3) === 0 && (num % 5) === 0 && (num % 7) === 0) {
+        newStr = 'DiegoRiccardoStefano'
+    } else if ((num % 3) === 0 && (num % 5) === 0) {
         newStr = 'DiegoRiccardo'
     } else if ((num % 3) === 0 && (num % 7) === 0) {
         newStr = 'DiegoStefano'
@@ -266,7 +268,7 @@ const numberToString = function (num) {
     return newStr
 }
 
-console.log(numberToString(15))
+console.log(numberToString(35))
 
 /* 19. Create a function that that takes a phrase as a parameter and returns its acronym.
 Ex. British Broadcasting Corporation returns `BBC` */
